@@ -1,0 +1,19 @@
+Got an odd bug syncing to aggserver.southcentralus.cloudapp.azure.com as olive. It displayed the same thing in an alert dialog.
+06-05 12:14:01.216 9353-9369/org.opendatakit.services:sync E/SyncNotification: 0 FINAL SYNC Notification -default TEXT:Protocol Error.
+Please verify that the server and device are compatible.
+0
+
+Also when I dismissed the alert dialog, the "SYNC NOW" button was disabled.
+
+06-05 12:16:50.341 9353-9421/org.opendatakit.services:sync E/HttpRestProtocolWrapper: Unexpected server response statusCode: 400
+06-05 12:16:50.342 9353-9421/org.opendatakit.services:sync E/ProcessRowDataPushLocalChanges: Exception in synchronizeTable - pushing data up to server on table: registration exception: Unexpected server response status...
+06-05 12:16:50.342 9353-9421/org.opendatakit.services:sync W/System.err: org.opendatakit.services.sync.service.exceptions.ServerDetectedVersionMismatchedClientRequestException: Unexpected server response statusCode: 400
+06-05 12:16:50.342 9353-9421/org.opendatakit.services:sync W/System.err: at org.opendatakit.services.sync.service.logic.HttpRestProtocolWrapper.httpClientExecute(HttpRestProtocolWrapper.java:904)
+06-05 12:16:50.342 9353-9421/org.opendatakit.services:sync W/System.err: at org.opendatakit.services.sync.service.logic.AggregateSynchronizer.pushLocalRows(AggregateSynchronizer.java:551)
+06-05 12:16:50.342 9353-9421/org.opendatakit.services:sync W/System.err: at org.opendatakit.services.sync.service.logic.ProcessRowDataPushLocalChanges.pushLocalChanges(ProcessRowDataPushLocalChanges.java:417)
+06-05 12:16:50.342 9353-9421/org.opendatakit.services:sync W/System.err: at org.opendatakit.services.sync.service.logic.ProcessRowDataOrchestrateChanges.synchronizeTableDataRowsAndAttachments(ProcessRowDataOrchestrateChanges.java:274)
+06-05 12:16:50.342 9353-9421/org.opendatakit.services:sync W/System.err: at org.opendatakit.services.sync.service.logic.ProcessRowDataOrchestrateChanges.synchronizeDataRowsAndAttachments(ProcessRowDataOrchestrateChanges.java:166)
+06-05 12:16:50.342 9353-9421/org.opendatakit.services:sync W/System.err: at org.opendatakit.services.sync.service.AppSynchronizer$SyncTask.sync(AppSynchronizer.java:302)
+06-05 12:16:50.343 9353-9421/org.opendatakit.services:sync W/System.err: at org.opendatakit.services.sync.service.AppSynchronizer$SyncTask.run(AppSynchronizer.java:174)
+06-05 12:16:50.343 9353-9421/org.opendatakit.services:sync W/System.err: at java.lang.Thread.run(Thread.java:818)
+0
