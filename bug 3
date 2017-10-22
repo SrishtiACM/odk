@@ -1,0 +1,21 @@
+Sync sometimes backs you out when finishing or failing its sync process
+
+
+Software and hardware versions
+
+ODK 2.0 RC1, Nexus 6, Android 6. I was reproing with the cold chain demo, but I don't think it matters.
+
+Problem description
+
+When syncing, as the process nears completion sometimes it will back you out to the previous screen.
+You then have to open up the sync UI again to see what the result was.
+
+Steps to reproduce the problem
+
+Authenticate and synchronize to a server. You don't need to by syncing new changes, you can just keep hitting sync and eventually one of them will pop you out. It seems to be more frequent on older hardware.
+
+Expected behavior
+
+The sync UI should never back you out or finish unless you press a button indicating you want that.
+
+Other information
