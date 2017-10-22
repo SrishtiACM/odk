@@ -1,0 +1,3 @@
+It is possible for a form to emit numeric values for +/- infinity and NaN.
+
+These do not parse in ODK Aggregate because Double.valueOf() doesn't parse them.
