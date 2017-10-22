@@ -1,0 +1,7 @@
+Software and hardware versions
+
+Scan rev212 RC2
+
+Problem description
+
+Survey and Tables have a plethora of examples to use in app-designer, but Scan has none. The old example form is no longer compatible and was created before we had a "save as incomplete" option. We can probably use the VR Maternal health form from Malawi but would want to confirm with them first.
